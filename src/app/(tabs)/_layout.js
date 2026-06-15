@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router';
 import { Image, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { styles } from '../styles/tabs._layout.styles';
+import { styles } from '../../styles/tabs._layout.styles';
 
 export default function TabsLayout() {
   return (
