@@ -1,22 +1,18 @@
-import { Tabs } from 'expo-router';
-import { Image, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+﻿import { Tabs } from 'expo-router';
+import { Image, View } from 'react-native';
+import Header from '../../components/Header';
 import { styles } from '../../styles/tabs._layout.styles';
 
 export default function TabsLayout() {
   return (
-    <View style={styles.wrapper}>
-      <SafeAreaView style={styles.headerContainer} edges={['top']}>
-        <View style={styles.headerContent}>
-          <Text style={styles.logoText}>Foo News</Text>
-        </View>
-      </SafeAreaView>
+    <View style={{ flex: 1 }}>
+      <Header />
       <Tabs screenOptions={{ headerShown: false }}>
         <Tabs.Screen name="index" options={{
           tabBarLabel: 'News feed',
           tabBarIcon: ({ color, size }) => (
             <Image
-              source={require('../../assets/favicon.png')}
+              source={require('../../assets/images/tabIcons/home.png')} 
               style={{ width: size, height: size, tintColor: color }}
             />
           ),
@@ -25,7 +21,7 @@ export default function TabsLayout() {
           tabBarLabel: 'Create article',
           tabBarIcon: ({ color, size }) => (
             <Image
-              source={require('../../assets/adaptive-icon.png')}
+              source={require('../../assets/images/tabIcons/explore.png')} 
               style={{ width: size, height: size, tintColor: color }}
             />
           ),
